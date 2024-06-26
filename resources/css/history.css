@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+:root {
+  --bg-primary: #fff;
+  --bg-secondary: #fcfcfc;
+  --warna-h1: #000;
+  --offer-h1: #ff0000;
+  --text-offer: #000;
+  --btn-color1: #ff0000;
+  --btn-color2: #ff0000;
+}
+
+.dark-mode {
+  --bg-primary: #0f1734;
+  --bg-secondary: #0a1025;
+  --warna-h1: #fff;
+  --offer-h1: #fff;
+  --text-offer: #f7f7f7;
+  --btn-color1: #ff0000;
+  --btn-color2: #ff0000;
+}
+
+.container {
+  width: 100%;
+  min-width: 100vh;
+  overflow: hidden;
+}
+
+.navbar {
+  width: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  cursor: pointer;
+  margin: 30px 0;
+}
+
+body {
+  font-family: "Inter", serif;
+  background-color: var(--bg-secondary);
+  position: relative;
+}
+
+h1,h2,h3,h4,h5,h6,p,.h1,.h2,.h3,.h4,.h5,.h6,small {
+  font-family: 'Inter', sans-serif;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+  color: var(--warna-h1);
+}
+
+nav {
+  font-family: 'Inter';
+  flex: 1;
+  text-align: right;
+  vertical-align: text-top;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: text-top;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--warna-h1);
+  font-size: 14px;
+  vertical-align: text-top;
+}
+
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+check-box {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked~.check:before {
+  transform: translateX(20px);
+}
+
+input[type="checkbox"]:checked~.check:before {
+  background-color: #ff0000;
+  box-shadow: 0 0 0 50000px #ffffff;
+}
+
+.check:before,
+.check:after {
+  border-radius: 50%;
+  content: '';
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  transition: transform 1.5s ease;
+  width: 16px;
+}
+
+.check:before {
+  background-color: #ffffff;
+  left: 2px;
+}
+
+.check {
+  background-color: #ff0000;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
+  margin-left: 20px;
+  width: 40px;
+}
+
+/*TABEL */
+
+h1 {
+  font-size: 26px;
+  color: var(--warna-h1);
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.tbl-header {
+  border: 1px solid var(--warna-h1);
+  table-layout: auto;
+}
+
+.tbl-content {
+  height: 600px;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid var(--warna-h1);
+}
+
+th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+section {
+  margin: 20px 150px;
+}
+
+
+
+
+@media only screen and (max-width:700px) {
+  nav ul {
+    width: 100%;
+    background: var(--bg-primary);
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+  }
+
+  nav ul li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+}
+
+footer {
+  background-color: #ff0000;
+  height: auto;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h2{
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p{
+  color: #fff;
+  max-width: 750px;
+  margin: 3px auto;
+  font-size: 14px;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+  margin: 0 10px;
+}
+
+.socials a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials a i{
+  font-size: 1.1rem;
+}
+
+.socials a:hover i{
+  color: #ff0000;
+}
+
+.footer-bottom{
+  background-color:#ff0000;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p{
+  color: #fff;
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
